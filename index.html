@@ -2,17 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/BV-MUSIC-LOGO-SMALL.jpg" />
     <script src="js/script.js" defer></script>
-    <title>Document</title>
+    <title>BV Landing Page</title>
 </head>
 <body>
-    <h1>BV Landing page</h1>
-    <ul>
-        <li>difasdf</li>
-        <li>dafsdafs</li>
-        <li>asdfasdfasd</li>
-    </ul>
+    <header>
+      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+<nav id="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li class="has-submenu">
+      <a href="#Servicios">Servicios</a>
+      <ul class="submenu">
+        <li><a href="#Mezcla">Mezcla</a></li>
+        <li><a href="#Mastering">Mastering</a></li>
+        <li><a href="#Estudio">Estudio</a></li>
+        <li><a href="#Diseño">Diseño</a></li>
+      </ul>
+    </li>
+    <li><a href="#Contacto">Contacto</a></li>
+    <li><a href="./pages/faqs.html">FAQS</a></li>
+  </ul>
+</nav>
+    </header>
+
+    <main>
+
+      <section class="box background who-we-are">
+        <span class="corners corners--top"></span>
+        <span class="corners corners--bottom"></span>
+        <div class="content">
+            <h1 class="title">BAJO VIGILANCIA MUSIC</h1>
+            <p class="description">
+                Ofrecemos servicios profesionales de grabación, mezcla, mastering y diseño gráfico. Garantizando un acabado profesional y personalizado para tu proyecto musical.
+            </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer footer-content background">
+        <p class="footer-title"> BAJO VIGILANCIA MUSIC &copy;</p>
+        <!-- <p class="footer-email">music@bajovigilancia.com</p> -->
+        <div class="footer-links">
+          <a href="#">POLÍTICA DE PRIVACIDAD</a>
+          <a href="#">TÉRMINOS Y CONDICIONES</a>
+          <a href="#">CONFIGURACIÓN DE COOKIES</a>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

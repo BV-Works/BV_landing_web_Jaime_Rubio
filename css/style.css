@@ -1,7 +1,245 @@
-h1 {
-    color: blue;
+:root {
+  --corporative-pink: #F72585;
+  --black: #000000;
+  --white: #F5F5F5;
+}
+
+html, body {
+  margin: 0;
 }
 
 body {
-    background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Stara', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+}
+
+.background {
+  background: url("../assets/img/DESCKTOP-LANDING-BACKGROUND.png") center / cover no-repeat;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--dutch-white);
+  cursor: pointer;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--corporative-pink);
+}
+
+.description {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.who-we-are .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.who-we-are .title {
+  color: var(--black);
+}
+
+.box {
+  position: relative;
+  padding: 4rem;
+}
+
+footer {
+  color: var(--dutch-white);
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-content .footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+footer .footer-content .footer-email {
+    margin: 0;
+}
+
+footer .footer-content .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 1rem 1rem 1rem;
+}
+
+footer .footer-content .footer-links a {
+  position: relative;
+  color: var(--black);
+  text-decoration: none;
+  margin-right: 18px;
+}
+
+footer .footer-content .footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-content .footer-links a::after {
+  content: "";
+}
+
+
+
+/* ========================= */
+/* CRUCES INTERNAS */
+/* ========================= */
+
+/* Base común */
+.corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --size: clamp(1rem, 1.3rem, 1.5rem);
+  --thickness: clamp(0.1rem, 0.3rem, 0.5rem);
+}
+
+/* Base + */
+.corners::before,
+.corners::after {
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background:
+    linear-gradient(black, black) center / 100% var(--thickness) no-repeat,
+    linear-gradient(black, black) center / var(--thickness) 100% no-repeat;
+}
+
+/* + SUPERIOR IZQ */
+.corners--top::before {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+/* + SUPERIOR DERECHA */
+.corners--top::after {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* + INFERIOR IZQUIERDA */
+.corners--bottom::before {
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+/* + INFERIOR DERECHA */
+.corners--bottom::after {
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+/* CONTROLAR CUALES SE MUESTRAN */
+/* Las 4 + */
+.box--all .corners {
+  display: block;
+}
+
+/* Solo abajo */
+.box--bottom .corners--top {
+  display: none;
+}
+
+/* Solo arriba */
+.box--top .corners--bottom {
+  display: none;
+}
+
+/* ========================= */
+/* MEDIA QUERIES */
+/* ========================= */
+
+@media only screen and (max-width: 762px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    background-color: var(--blue-violet);
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    border: 1px solid var(--amber);
+  }
+
+  #navbar.active {
+    display: flex;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+  }
+
+  .who-we-are .content {
+    width: 100%;
+  }
+}
+
+/* | DE LOS LINKS DEL FOOTER */
+
+@media (min-width: 494px) and (max-width: 762px) {
+
+  footer .footer-content .footer-links a:first-child::after {
+    content: "|";
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+@media (min-width: 762px) {
+
+  footer .footer-content .footer-links a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -12px;  /* lo colocamos fuera */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 }
