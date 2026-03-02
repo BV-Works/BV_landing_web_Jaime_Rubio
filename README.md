@@ -20,8 +20,11 @@ BV_landing_web_Jaime_Rubio/
 ├── js/
 │   └── script.js
 │
+│├── pages/
+│   └── faqs.html
+│
 └── assets/
-    ├── images/
+    ├── img/
     └── icons/
 ```
 
