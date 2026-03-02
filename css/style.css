@@ -2,6 +2,7 @@
   --corporative-pink: #F72585;
   --black: #000000;
   --white: #F5F5F5;
+  --white-transparent: rgba(255,255,255,0.6);
 }
 
 html, body {
@@ -42,8 +43,67 @@ main {
   background: none;
   border: none;
   font-size: 2rem;
-  color: var(--dutch-white);
+  color: var(--black);
   cursor: pointer;
+}
+
+#menu-toggle-close {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+#nav-overlay {
+  display: none;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#navbar li {
+  position: relative;
+}
+
+#navbar a {  
+  font-size: 2rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+#navbar a:hover {
+  color: var(--corporative-pink);
+}
+
+#navbar .submenu {
+  text-align: right;
+  max-height: 0;       /* colapsado por defecto */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+#navbar .has-submenu:hover .submenu {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Submenu items */
+#navbar .submenu .sub-category a {
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .title {
@@ -57,19 +117,24 @@ main {
   font-style: italic;
 }
 
-.who-we-are .content {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
-
-.who-we-are .title {
-  color: var(--black);
-}
-
 .box {
   position: relative;
   padding: 4rem;
+}
+
+section.who-we-are {
+    min-height: 360px;
+}
+
+section.who-we-are .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+section.who-we-are .title {
+  color: var(--black);
 }
 
 footer {
@@ -194,6 +259,11 @@ footer .footer-content .footer-links a::after {
     display: block;
   }
 
+  #menu-toggle-close.active {
+    display: block;
+    z-index: 3;
+  }
+
   #navbar {
     display: none;
     flex-direction: column;
@@ -203,6 +273,7 @@ footer .footer-content .footer-links a::after {
     right: 10px;
     width: 200px;
     border: 1px solid var(--amber);
+    z-index: 3;
   }
 
   #navbar.active {
@@ -213,7 +284,24 @@ footer .footer-content .footer-links a::after {
     flex-direction: column;
   }
 
-  .who-we-are .content {
+  #nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 311px;
+    height: 488px;
+    background: var(--white-transparent);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    border-radius: 8px;
+  }
+  
+  #nav-overlay.active {
+    display: block;
+  }
+
+  section.who-we-are .content {
     width: 100%;
   }
 }
