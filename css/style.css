@@ -23,9 +23,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 1.5rem 10px;
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 0;
   z-index: 1;
 }
@@ -38,6 +38,7 @@ main {
   background: url("../assets/img/DESCKTOP-LANDING-BACKGROUND.png") center / cover no-repeat;
 }
 
+/* HEADER NAVEGACIÓN Y TOGGLE DE NAVEGACIÓN */
 #menu-toggle {
   display: none;
   background: none;
@@ -99,44 +100,85 @@ main {
   opacity: 1;
 }
 
-/* Submenu items */
 #navbar .submenu .sub-category a {
   padding: 0.3rem 1rem;
   font-size: 1.5rem;
   font-weight: normal;
 }
 
-.title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--corporative-pink);
-}
-
-.description {
-  font-size: 1rem;
-  font-style: italic;
-}
+/* CONTENIDO DE LA PÁGINA */
 
 .box {
   position: relative;
   padding: 4rem;
 }
 
-section.who-we-are {
+section.background {
     min-height: 360px;
 }
 
-section.who-we-are .content {
+section .content-top {
     width: 70%;
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
 }
 
-section.who-we-are .title {
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--corporative-pink);
+  overflow-wrap: break-word;
+}
+
+.who-we-are .title {
   color: var(--black);
 }
 
+
+.description {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* GALLERY */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-track.dragging {
+  cursor: grabbing;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  flex: 0 0 auto;
+  max-height: 280px;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  scroll-snap-align: start;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* FOOTER */
 footer {
   color: var(--dutch-white);
   text-align: center;
@@ -286,11 +328,11 @@ footer .footer-content .footer-links a::after {
 
   #nav-overlay {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 311px;
-    height: 488px;
+    height: 600px;
     background: var(--white-transparent);
     backdrop-filter: blur(10px);
     z-index: 2;
@@ -301,8 +343,46 @@ footer .footer-content .footer-links a::after {
     display: block;
   }
 
-  section.who-we-are .content {
+  section .content-top {
     width: 100%;
+  }
+
+  /* carousel */
+    .carousel {
+    overflow: hidden;
+  }
+
+  .carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, white);
+  }
+
+  .carousel-track {
+    gap: 0; 
+    padding: 0 16px;
+    scrollbar-width: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  .carousel-track img {
+    flex: 0 0 85%;
+    margin-right: 0.5rem;
+    max-height: 280px;
+    height: auto; 
+    width: 100%;
+    object-fit: contain;
+    scroll-snap-align: center; 
   }
 }
 
