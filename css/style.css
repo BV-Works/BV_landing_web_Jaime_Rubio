@@ -96,7 +96,7 @@ section h2 {
 
 #navbar .submenu {
   text-align: right;
-  max-height: 0;       /* colapsado por defecto */
+  max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -150,6 +150,8 @@ section .content-top {
 .description {
   font-size: 1rem;
   font-style: italic;
+  text-align: justify;
+  max-width: 100%;
 }
 
 .description .sub-title {
@@ -165,13 +167,13 @@ section .content-top {
   margin-top: 2rem;
 }
 
-/* GALLERY */
+/* GALLERY VIDEO Y CARROUSEL */
 
 #gallery {
   flex: 1;
   display: flex;
-  align-items: center;     /* centra vertical */
-  justify-content: center; /* centra horizontal */
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel {
@@ -188,6 +190,15 @@ section .content-top {
   height: 100%;
   pointer-events: none;
   background: linear-gradient(to right, transparent,  var(--white));
+}
+
+#design .carousel {
+  position: relative;
+}
+
+#design .carousel::after {
+  width: 120px;
+  height: 280px;
 }
 
 .carousel-track {
@@ -220,32 +231,48 @@ section .content-top {
   -webkit-user-drag: none;
 }
 
+.video-wrapper {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* SERVICIOS */
 
 .services {
   display: flex;
-  gap: 20px;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: clamp(1rem, 4vw, 10rem);
 }
 
 .services-media {
-  flex: 1 1 400px; /* Imagen puede crecer o encogerse */
-  max-width: 400px; /* Nunca más ancha de 400px */
+  flex: 1 1 45%;
+  max-width: 980px;
+  min-width: 200px;
+  align-self: center;
 }
 
 .services-content {
-  flex: 1 1 400px; 
+  flex: 1 1 50%;
   max-width: 600px;
+  min-width: 200px;
 }
 
 .services-image {
   max-width: 100%;
-  max-height: 200px;
-  width: auto;
+  /* max-height: 200px; */
+  /* width: auto; */
+  width: 660px;
   height: auto;
-  border-radius: 8px;
   display: block;
 }
 
@@ -256,13 +283,12 @@ section .content-top {
 }
 
 .services-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
 }
 
 .feature {
-  /* flex: 1 1 calc(33.333% - 10px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,8 +301,8 @@ section .content-top {
 }
 
 .feature img {
-  width: clamp(70px, 90px, 100px);
-  height: clamp(70px, 90px, 100px);
+  width: clamp(60px, 7vw, 80px);
+  height: clamp(60px, 7vw, 80px);
   border: var(--corporative-pink) 2px solid;
   border-radius: 12px;
   margin-bottom: 8px;
@@ -340,10 +366,8 @@ footer .footer-badge img {
   width: 4rem;
 }
 
-
-
 /* ========================= */
-/* CRUCES INTERNAS */
+/* CRUCES DECORATIVAS */
 /* ========================= */
 
 /* Base común */
@@ -415,12 +439,18 @@ footer .footer-badge img {
     font-size: 2.5rem;
   }
 
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .carousel-track img {
     max-height: 270px;
   }
 }
 
 @media only screen and (max-width: 762px) {
+  /* HEADER Y NAVBAR */
   #menu-toggle {
     display: block;
   }
@@ -468,16 +498,19 @@ footer .footer-badge img {
   #navbar .submenu .sub-category a {
     padding-right: 0;
   }
-
+  /* CONTENIDO PRINCIPAL HOME */
   section .content-top {
     width: 100%;
   }
 
-  /* carousel */
-  .carousel::after {
-  width: 60px;
+  .services-features {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  /* CAROUSEL */
+  .carousel::after {
+    width: 60px;
+  }
 
   #gallery.box{
     padding: 1.5rem;
@@ -502,7 +535,7 @@ footer .footer-badge img {
     object-fit: contain;
     scroll-snap-align: center; 
   }
-
+  /* FOOTER */
   footer .footer-badge {
     position: static;
     margin-bottom: 1rem;
@@ -522,24 +555,14 @@ footer .footer-badge img {
   }
 
   .services {
-    flex-direction: row;
-  }
-
-  .feature {
-    flex: 1 1 calc(50% - 10px); /* 2 por línea en tablet */
+    flex-direction: column;
+    align-items: center;
   }
 
 }
 
 @media (min-width: 762px) {
 
-  .services {
-    flex-direction: row;
-  }
-
-  .feature {
-    flex: 1 1 calc(33.333% - 10px); /* 3 por línea */
-  }
 
   footer .footer-content .footer-links a:not(:last-child)::after {
     content: "|";
