@@ -116,9 +116,7 @@ npm start
 
 ## 📸 Capturas de Pantalla
 
-```markdown
 ![Captura 1](./assets/img/webScreenshot.png)
-```
 
 ---
 
