@@ -1,8 +1,8 @@
  <!-- **README genérico en Markdown** listo para copiar y pegar en tu proyecto HTML, CSS y JavaScript: -->
 
-# 📌 BV LANDING WEB JAIME RUBIO
+# 📌 BV LANDING WEB
 
-Primera iteración de la landing page para la web del estudio de producción audiovisual BajoVigilancia
+Primera iteración de la landing page para la web del estudio de producción audiovisual Bajo Vigilancia Music.
 
 ---
 
@@ -28,14 +28,14 @@ BV_landing_web_Jaime_Rubio/
     └── icons/
 ```
 
-<!-- ### 📄 Descripción de Archivos
+### 📄 Descripción de Archivos
 
 * `index.html` → Archivo principal HTML.
 * `css/styles.css` → Hoja de estilos principal.
 * `js/script.js` → Lógica principal en JavaScript.
 * `assets/` → Recursos estáticos como imágenes e íconos.
 
---- -->
+---
 
 ## 🚀 Instalación y Uso
 
@@ -55,6 +55,9 @@ cd BV_landing_web_Jaime_Rubio
 
 Puedes abrir el archivo `index.html` directamente en tu navegador o usar una extensión como **Live Server** en VS Code.
 
+### :globe_with_meridians: Proyecto desplegado 
+Puedes ver el proyecto online en: https://bv-works.github.io/BV_landing_web_Jaime_Rubio/
+
 ---
 
 ## 🛠️ Tecnologías Utilizadas
@@ -72,6 +75,24 @@ Puedes abrir el archivo `index.html` directamente en tu navegador o usar una ext
 * (Opcional) Git instalado
 
 ---
+## :wrench: Funcionalidades futuras
+
+- Agregar un formulario de contacto funcional.
+- Añadir pequeñas animaciones con transiciones CSS.
+- Complementar la sección de FAQs.
+- Añadir la sección Miembros, con todos los integrantes del equipo con una serie de tarjetones que cuando pinches te lleven a una pagina 
+individual estilo allMyLinks o LinkTree.
+- Agregar páginas politicas cookies, privacidad y condiciones de uso.
+- Agregar algún tipo de lógica de negocio adicional (todavía no se cuales).
+- Mejorar la accesibilidad (atributos ARIA y contraste de colores).
+- Trasladar la estructura del código a React y reaprovechar allí los estilos y componentes principales.
+- Mejorar el SEO.
+- Optimizar imágenes para mejorar la velocidad de carga.
+- Optimizar la app: SSR, deferred loading, lazy loading.
+- Google Pixel, Facebook Pixel.
+- Revisar textos y imágenes (Marketing).
+
+
 
 <!-- ## 📦 Scripts (Opcional)
 
@@ -93,21 +114,13 @@ npm start
 
 --- -->
 
-<!-- ## 📸 Capturas de Pantalla
-
-*Agrega aquí imágenes del proyecto si lo deseas.*
+## 📸 Capturas de Pantalla
 
 ```markdown
-![Captura 1](assets/images/screenshot1.png)
+![Captura 1](./assets/img/webScreenshot.png)
 ```
 
---- -->
-
-<!-- ## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo libremente.
-
---- -->
+---
 
 ## 👤 Autor
 
@@ -116,15 +129,3 @@ Jaime Rubio Salmerón: [https://github.com/BV-Works](https://github.com/BV-Works
 Email: [music@bajovigilancia.com](mailto:music@bajovigilancia.com)
 
 ---
-
-<!-- ## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas:
-
-1. Haz un fork del proyecto.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Haz commit de tus cambios.
-4. Haz push a la rama.
-5. Abre un Pull Request.
-
---- -->
