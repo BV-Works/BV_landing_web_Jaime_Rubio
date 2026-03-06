@@ -1,36 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/icons/LOGO-BV-FAVICON.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/icons/LOGO-BV-FAVICON.svg"
+    />
     <script src="../js/script.js" defer></script>
     <title>BV Landing Page</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-        <button id="menu-toggle-close" aria-label="Close navigation">X</button>
-        <div id="nav-overlay"></div>
-        <nav id="navbar">
+      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <button id="menu-toggle-close" aria-label="Close navigation">X</button>
+      <div id="nav-overlay"></div>
+      <nav id="navbar">
         <ul>
-            <li class="category"><a href="../index.html">HOME</a></li>
-            <li class="category has-submenu">
+          <li class="category"><a href="../index.html">HOME</a></li>
+          <li class="category has-submenu">
             <a href="./services.html">SERVICIOS</a>
             <ul class="submenu">
-                <li class="sub-category"><a href="./services.html#mix">MEZCLA</a></li>
-                <li class="sub-category"><a href="./services.html#master">MASTERING</a></li>
-                <li class="sub-category"><a href="./services.html#studio">ESTUDIO</a></li>
-                <li class="sub-category"><a href="./services.html#design">DISEÑO</a></li>
+              <li class="sub-category">
+                <a href="./services.html#mix">MEZCLA</a>
+              </li>
+              <li class="sub-category">
+                <a href="./services.html#master">MASTERING</a>
+              </li>
+              <li class="sub-category">
+                <a href="./services.html#studio">ESTUDIO</a>
+              </li>
+              <li class="sub-category">
+                <a href="./services.html#design">DISEÑO</a>
+              </li>
             </ul>
-            </li>
-            <li><a href="#">CONTACTO</a></li>
-            <li><a href="./faqs.html">FAQs</a></li>
+          </li>
+          <li><a href="#">CONTACTO</a></li>
+          <li><a href="./faqs.html">FAQs</a></li>
         </ul>
-        </nav>
+      </nav>
     </header>
 
     <main>
@@ -39,14 +50,48 @@
         <span class="corners corners--bottom"></span>
         <div class="content-top">
           <h1>CONTACTO</h1>
-          <p class="description">Si tienes cualquier duda o sugerencia, no dudes en contactar con nosotros a través del formulario.</p>
+          <p class="description">
+            Si tienes cualquier duda o sugerencia, no dudes en contactar con
+            nosotros a través del formulario.
+          </p>
+        </div>
+      </section>
+      <section id="form" class="box">
+        <div class="container contact">
+          <!-- FORMULARIO -->
+          <div class="contact-form">
+            <form>
+              <input type="text" placeholder="Nombre" required />
+
+              <input type="email" placeholder="Email" required />
+
+              <input type="tel" placeholder="Teléfono" />
+
+              <select required>
+                <option value="">Servicio</option>
+                <option>Mezcla</option>
+                <option>Mastering</option>
+                <option>Mezcla y Mastering</option>
+                <option>Estudio</option>
+                <option>Diseño</option>
+              </select>
+
+              <textarea placeholder="Mensaje"></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+
+          <!-- MAPA -->
+          <div class="contact-map">
+            <img src="../assets/img/MAPA.png" alt="Mapa de España" />
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="footer footer-content background">
-
         <div class="footer-left">
           <p class="footer-title">BAJO VIGILANCIA MUSIC &copy;</p>
 
@@ -58,10 +103,17 @@
         </div>
 
         <div class="footer-badge">
-          <a href="https://soundbetter.com/profiles/704126-bajovigilancia-music" rel="noopener noreferrer" target="_blank" title="BajoVigilancia Music profile on SoundBetter" ><img alt="BajoVigilancia Music, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" /></a>
+          <a
+            href="https://soundbetter.com/profiles/704126-bajovigilancia-music"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="BajoVigilancia Music profile on SoundBetter"
+            ><img
+              alt="BajoVigilancia Music, Mastering Engineer on SoundBetter"
+              src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+          /></a>
         </div>
-
       </div>
     </footer>
-</body>
+  </body>
 </html>
