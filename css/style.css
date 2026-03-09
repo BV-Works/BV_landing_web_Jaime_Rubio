@@ -140,6 +140,7 @@ section .content-top {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--corporative-pink);
+  font-weight: bold;
 }
 
 .who-we-are .title {
@@ -169,6 +170,14 @@ section .content-top {
   height: 2px;
   background: var(--corporative-pink);
   margin-top: 2rem;
+}
+
+select:invalid{
+  color: #999;
+}
+
+select option{
+  color: black;
 }
 
 /* GALLERY VIDEO Y CARROUSEL */
@@ -314,15 +323,11 @@ section .content-top {
 
 /* FORMULARIO Y PAGINA CONTACTO */
 
-/* CONTENEDOR */
-
 .container.contact {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
-
-/* FORMULARIO */
 
 .contact-form {
   flex: 1;
@@ -396,7 +401,7 @@ section .content-top {
 }
 
 .contact-map img {
-  max-width: 300px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -526,6 +531,8 @@ footer .footer-badge img {
 /* ========================= */
 /* MEDIA QUERIES */
 /* ========================= */
+
+
 @media only screen and (max-width: 510px) {
   .title {
     font-size: 2.5rem;

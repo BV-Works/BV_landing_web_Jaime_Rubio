@@ -4,6 +4,10 @@
 
 Primera iteración de la landing page para la web del estudio de producción audiovisual Bajo Vigilancia Music.
 
+### :globe_with_meridians: Proyecto desplegado 
+Puedes ver el proyecto online en: https://bv-works.github.io/BV_landing_web_Jaime_Rubio/
+
+
 ---
 
 ## 📂 Estructura del Proyecto
@@ -54,9 +58,6 @@ cd BV_landing_web_Jaime_Rubio
 ### 3️⃣ Abrir el proyecto
 
 Puedes abrir el archivo `index.html` directamente en tu navegador o usar una extensión como **Live Server** en VS Code.
-
-### :globe_with_meridians: Proyecto desplegado 
-Puedes ver el proyecto online en: https://bv-works.github.io/BV_landing_web_Jaime_Rubio/
 
 ---
 

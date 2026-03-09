@@ -67,22 +67,21 @@
 
               <input type="tel" placeholder="Teléfono" />
 
-              <select required>
-                <option value="">Servicio</option>
-                <option>Mezcla</option>
-                <option>Mastering</option>
-                <option>Mezcla y Mastering</option>
-                <option>Estudio</option>
-                <option>Diseño</option>
+              <select name="servicio" required>
+                <option value="" disabled selected>Seleccionar servicio</option>
+                <option value="mezcla">Mezcla</option>
+                <option value="mastering">Mastering</option>
+                <option value="mezcla-mastering">Mezcla y Mastering</option>
+                <option value="estudio">Estudio</option>
+                <option value="diseno">Diseño</option>
               </select>
-
+              
               <textarea placeholder="Mensaje"></textarea>
 
               <button type="submit">Enviar</button>
             </form>
           </div>
 
-          <!-- MAPA -->
           <div class="contact-map">
             <img src="../assets/img/MAPA.png" alt="Mapa de España" />
           </div>
