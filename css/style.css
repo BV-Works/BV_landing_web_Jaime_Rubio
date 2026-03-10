@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Helvetica Now Display";
-  src: url("../assets/fonts/HelveticaNowDisplayRegular-5760477.ttf") format("truetype");
+  src: url("../assets/fonts/HelveticaNowDisplayRegular-5760477.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -188,11 +189,11 @@ section .content-top {
   margin-top: 2rem;
 }
 
-select:invalid{
+select:invalid {
   color: #999;
 }
 
-select option{
+select option {
   color: black;
 }
 
@@ -366,25 +367,25 @@ select option{
   font-size: 0.9rem;
 }
 
-.contact-form select{
-  padding:12px 18px;
-  border-radius:30px;
-  border:1px solid #999;
-  background:transparent;
-  outline:none;
-  font-size:0.9rem;
+.contact-form select {
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #999;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
 
   /* quitar flecha nativa */
-  appearance:none;
-  -webkit-appearance:none;
-  -moz-appearance:none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
-  padding-right:40px;
+  padding-right: 40px;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff2b7a'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:right 14px center;
-  background-size:18px;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
 }
 
 .contact-form textarea {
@@ -547,7 +548,6 @@ footer .footer-badge img {
 /* ========================= */
 /* MEDIA QUERIES */
 /* ========================= */
-
 
 @media only screen and (max-width: 510px) {
   .title {
