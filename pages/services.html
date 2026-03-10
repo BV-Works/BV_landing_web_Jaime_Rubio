@@ -1,208 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/icons/LOGO-BV-FAVICON.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/icons/LOGO-BV-FAVICON.svg"
+    />
     <script src="../js/script.js" defer></script>
     <title>BV Landing Page</title>
-</head>
-<body>
-  <div class="layout">
-    <header>
-        <span class="corners corners--top no-md"></span>
-        <span class="corners corners--bottom no-md"></span>
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <span class="corner top-left no-md"></span>
+        <span class="corner top-right no-md"></span>
+        <span class="corner bottom-left no-md"></span>
+        <span class="corner bottom-right no-md"></span>
+        <!-- <span class="corner center-top"></span>
+        <span class="corner center-bottom"></span> -->
         <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
         <button id="menu-toggle-close" aria-label="Close navigation">X</button>
         <div id="nav-overlay"></div>
         <nav id="navbar">
-        <ul>
+          <ul>
             <li class="category"><a href="../index.html">HOME</a></li>
             <li class="category has-submenu">
-            <a href="#">SERVICIOS</a>
-            <ul class="submenu">
+              <a href="#">SERVICIOS</a>
+              <ul class="submenu">
                 <li class="sub-category"><a href="#mix">MEZCLA</a></li>
                 <li class="sub-category"><a href="#master">MASTERING</a></li>
                 <li class="sub-category"><a href="#studio">ESTUDIO</a></li>
                 <li class="sub-category"><a href="#design">DISEÑO</a></li>
-            </ul>
+              </ul>
             </li>
             <li><a href="./contact.html">CONTACTO</a></li>
             <li><a href="./faqs.html">FAQs</a></li>
-        </ul>
+          </ul>
         </nav>
-    </header>
-    <main>
-      <section class="box">
-        <!-- <span class="corners corners--top"></span>
+      </header>
+      <main>
+        <span class="corner top-left"></span>
+        <span class="corner top-right no-lg"></span>
+        <span class="corner bottom-left"></span>
+        <span class="corner center-top"></span>
+        <!-- <span class="corner center-bottom"></span> -->
+        <span class="corner bottom-right"></span>
+        <section class="box">
+          <!-- <span class="corners corners--top"></span>
         <span class="corners corners--bottom"></span> -->
-        <div class="content-top">
-          <h1>SERVICIOS</h1>
-          <p class="description">Aquí encontrarás todos los servicios que ofrecemos en <span class="sub-title">BAJO VIGILANCIA MUSIC</span>.</p>
-          <section class="faq">
-              <h2>¿Cómo puedo contratar sus servicios?</h2>
-              <p class="description">Puedes contactarnos a través de nuestro formulario en la página de contacto o enviándonos un correo electrónico a: <a class="sub-title" href="mailto:music@bajovigilancia.com">music@bajovigilancia.com</a>.</p>
-              <p class="description">La mayoría de nuestros servicios son <span class="sub-title">online</span>, por lo que te responderemos lo antes posible y además podremos conectar por video llamada para aclarar cualquier duda sobre tu proyecto.</p>
+          <div class="content-top">
+            <h1>SERVICIOS</h1>
+            <p class="description">
+              Aquí encontrarás todos los servicios que ofrecemos en
+              <span class="sub-title">BAJO VIGILANCIA MUSIC</span>.
+            </p>
+            <h2>¿Cómo puedo contratar sus servicios?</h2>
+            <p class="description">
+              Puedes contactarnos a través de nuestro formulario en la página de
+              contacto o enviándonos un correo electrónico a:
+              <a class="sub-title" href="mailto:music@bajovigilancia.com"
+                >music@bajovigilancia.com</a
+              >.
+            </p>
+            <p class="description">
+              La mayoría de nuestros servicios son
+              <span class="sub-title">online</span>, por lo que te responderemos
+              lo antes posible y además podremos conectar por video llamada para
+              aclarar cualquier duda sobre tu proyecto.
+            </p>
           </div>
-      </section>
+        </section>
 
-      <section id="mix" class="box">
-        <!-- <span class="corners corners--bottom"></span> -->
+        <section id="mix" class="box">
+          <!-- <span class="corners corners--bottom"></span> -->
           <h2>MEZCLA</h2>
-          <p class="description">Realizamos la limpieza de tus pistas, ajustamos la ecualización, la dinámica, el tono y el volumen en consonancia con el estilo y la intención artística del proyecto.</p>
-          <p class="description last">Trabajamos tanto con instrumentales como con voces, asegurando un sonido profesional y equilibrado entre los distintos elementos de la mezcla.</p>
+          <p class="description">
+            Realizamos la limpieza de tus pistas, ajustamos la ecualización, la
+            dinámica, el tono y el volumen en consonancia con el estilo y la
+            intención artística del proyecto.
+          </p>
+          <p class="description last">
+            Trabajamos tanto con instrumentales como con voces, asegurando un
+            sonido profesional y equilibrado entre los distintos elementos de la
+            mezcla.
+          </p>
           <div class="services">
             <div class="services-media">
-              <img src="../assets/img/MARKETING-IMG-3.png" alt="Marketing image 1" class="services-image">
+              <img
+                src="../assets/img/MARKETING-IMG-3.png"
+                alt="Marketing image 1"
+                class="services-image"
+              />
             </div>
             <div class="services-content">
               <div class="services-text">
                 <p class="description">
-                  Mezclar una canción es el proceso de combinar y ajustar todas las pistas de audio grabadas (como voces, instrumentos y efectos) para que suenen de manera equilibrada y coherente. Esto incluye:
+                  Mezclar una canción es el proceso de combinar y ajustar todas
+                  las pistas de audio grabadas (como voces, instrumentos y
+                  efectos) para que suenen de manera equilibrada y coherente.
+                  Esto incluye:
                 </p>
               </div>
               <div class="services-features">
                 <div class="feature">
-                  <img src="../assets/img/EDIT-ICON.png" alt="Edición y limpieza de audio">
+                  <img
+                    src="../assets/img/EDIT-ICON.png"
+                    alt="Edición y limpieza de audio"
+                  />
                   <p class="feature-label">Edición y limpieza de audio</p>
                 </div>
 
                 <div class="feature">
-                  <img src="../assets/img/EQ-ICON.png" alt="Ecualización y balance">
+                  <img
+                    src="../assets/img/EQ-ICON.png"
+                    alt="Ecualización y balance"
+                  />
                   <p class="feature-label">Ecualización y Balance</p>
                 </div>
 
                 <div class="feature">
-                  <img src="../assets/img/COMP-ICON.png" alt="Compresión">
+                  <img src="../assets/img/COMP-ICON.png" alt="Compresión" />
                   <p class="feature-label">Compresión</p>
                 </div>
 
                 <div class="feature">
-                  <img src="../assets/img/VOLUME-ICON.png" alt="Dinámica y volumen">
+                  <img
+                    src="../assets/img/VOLUME-ICON.png"
+                    alt="Dinámica y volumen"
+                  />
                   <p class="feature-label">Dinámica y Volumen</p>
                 </div>
 
                 <div class="feature">
-                  <img src="../assets/img/EFFECTS-ICON.png" alt="Efectos y procesamiento">
+                  <img
+                    src="../assets/img/EFFECTS-ICON.png"
+                    alt="Efectos y procesamiento"
+                  />
                   <p class="feature-label">Efectos y Procesamiento</p>
                 </div>
 
                 <div class="feature">
-                  <img src="../assets/img/360-ICON.png" alt="Imagen estereo">
+                  <img src="../assets/img/360-ICON.png" alt="Imagen estereo" />
                   <p class="feature-label">Imagen estereo</p>
                 </div>
               </div>
             </div>
           </div>
-      </section>
+        </section>
 
-      <section id="master" class="box">
-        <!-- <span class="corners corners--bottom"></span> -->
+        <section id="master" class="box">
+          <!-- <span class="corners corners--bottom"></span> -->
           <h2>MASTERING</h2>
 
-          <p class="description">Contamos con una sala de monitorización acústicamente tratada y con un equipo de alta calidad 
-          para garantizar un resultado profesional.</p>
+          <p class="description">
+            Contamos con una sala de monitorización acústicamente tratada y con
+            un equipo de alta calidad para garantizar un resultado profesional.
           </p>
-          <p class="description">Optimizamos tu track, ajustando ecualización, dinámica y volumen para asegurar que suene bien 
-          en todos los sistemas de reproducción y plataformas digitales.
+          <p class="description">
+            Optimizamos tu track, ajustando ecualización, dinámica y volumen
+            para asegurar que suene bien en todos los sistemas de reproducción y
+            plataformas digitales.
           </p>
-          <p class="description last">Podemos trabajar con un solo archivo de audio que incluya la mezcla final de las voces sobre la instrumental.
-           Aunque personalmente nos gusta que nos enviéis las 2 pistas separadas (la vocal y la instrumental) para tener más control sobre el proceso.
+          <p class="description last">
+            Podemos trabajar con un solo archivo de audio que incluya la mezcla
+            final de las voces sobre la instrumental. Aunque personalmente nos
+            gusta que nos enviéis las 2 pistas separadas (la vocal y la
+            instrumental) para tener más control sobre el proceso.
           </p>
           <div class="services">
-          <div class="services-media">
-            <img src="../assets/img/MARKETING-IMG-1.png" alt="Marketing image 1" class="services-image">
+            <div class="services-media">
+              <img
+                src="../assets/img/MARKETING-IMG-1.png"
+                alt="Marketing image 1"
+                class="services-image"
+              />
+            </div>
+            <div class="services-content">
+              <div class="services-text">
+                <p class="description">
+                  Hacer un “Master” de una canción es el último paso en el
+                  proceso de producción musical, que consiste en preparar la
+                  grabación final para su distribución. Esto incluye:
+                </p>
+              </div>
+              <div class="services-features">
+                <div class="feature">
+                  <img
+                    src="../assets/img/EQ-ICON.png"
+                    alt="Ecualización y balance"
+                  />
+                  <p class="feature-label">Ecualización y Balance</p>
+                </div>
+
+                <div class="feature">
+                  <img src="../assets/img/COMP-ICON.png" alt="Compresión" />
+                  <p class="feature-label">Compresión</p>
+                </div>
+
+                <div class="feature">
+                  <img src="../assets/img/VOLUME-ICON.png" alt="Volumen" />
+                  <p class="feature-label">Volumen</p>
+                </div>
+
+                <div class="feature">
+                  <img src="../assets/img/EDIT-ICON.png" alt="Edición final" />
+                  <p class="feature-label">Edición final</p>
+                </div>
+
+                <div class="feature">
+                  <img
+                    src="../assets/img/FILES-ICON.png"
+                    alt="Formato y metadatos"
+                  />
+                  <p class="feature-label">Formato y Metadatos</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="services-content">
-            <div class="services-text">
-              <p class="description">
-                Hacer un “Master” de una canción es el último paso en el proceso de producción musical, 
-                que consiste en preparar la grabación final para su distribución. Esto incluye:
-              </p>
-            </div>
-            <div class="services-features">
-              <div class="feature">
-                <img src="../assets/img/EQ-ICON.png" alt="Ecualización y balance">
-                <p class="feature-label">Ecualización y Balance</p>
-              </div>
+        </section>
 
-              <div class="feature">
-                <img src="../assets/img/COMP-ICON.png" alt="Compresión">
-                <p class="feature-label">Compresión</p>
-              </div>
-
-              <div class="feature">
-                <img src="../assets/img/VOLUME-ICON.png" alt="Volumen">
-                <p class="feature-label">Volumen</p>
-              </div>
-
-              <div class="feature">
-                <img src="../assets/img/EDIT-ICON.png" alt="Edición final">
-                <p class="feature-label">Edición final</p>
-              </div>
-
-              <div class="feature">
-                <img src="../assets/img/FILES-ICON.png" alt="Formato y metadatos">
-                <p class="feature-label">Formato y Metadatos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="design" class="box">
-        <!-- <span class="corners corners--bottom"></span> -->
-          <h2>DISEÑO</h2>
-          <p class="description last">Ofrecemos un servicio de diseño integral, cualquier idea que tengas la transformamos en una imagen única.</p>
-            <div class="carousel">
-              <div class="carousel-track">
-                <img src="../assets/img/COVER-0.jpg" alt="Cover 0">
-                <img src="../assets/img/COVER-1.jpg" alt="Cover 1">
-                <img src="../assets/img/COVER-2.jpg" alt="Cover 2">
-                <img src="../assets/img/COVER-3.jpg" alt="Cover 3">
-                <img src="../assets/img/COVER-4.jpg" alt="Cover 4">
-                <img src="../assets/img/COVER-5.jpg" alt="Cover 5">
-                <img src="../assets/img/COVER-6.jpg" alt="Cover 6">
-                <img src="../assets/img/COVER-7.jpg" alt="Cover 7">
-              </div>
-            </div>
-      </section>
-
-      <section id="studio" class="box">
+        <section id="design" class="box">
           <!-- <span class="corners corners--bottom"></span> -->
-          <h2>ESTUDIO</h2>
-          <p class="description">Todos nuestros servicios están disponibles de manera online. Pero si vives en Asturias o te apetece visitar esta maravillosa provincia también puedes venir a nuestro estudio.</p>
-          <p class="description last">Aquí os dejamos una muestra de nuestro espacio de trabajo con una actuación en vivo de uno de los integrantes de nuestro equipo.</p>
-          <!-- <img src="../assets/img/MARKETING-IMG-4.png" alt="Marketing image 4">   -->
-          <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jlKeclWUtBI?si=vhAVYtA5p2k5CATq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-
-          
-        <section id="gallery" class="box">
+          <h2>DISEÑO</h2>
+          <p class="description last">
+            Ofrecemos un servicio de diseño integral, cualquier idea que tengas
+            la transformamos en una imagen única.
+          </p>
           <div class="carousel">
             <div class="carousel-track">
-              <img src="../assets/img/STUDIO-01.jpg" alt="Imagen estudio1">
-              <img src="../assets/img/STUDIO-02.jpg" alt="Imagen estudio2">
-              <img src="../assets/img/STUDIO-03.jpg" alt="Imagen estudio3">
-              <img src="../assets/img/STUDIO-04.jpg" alt="Imagen estudio4">
-              <img src="../assets/img/STUDIO-05.jpg" alt="Imagen estudio5">
-              <img src="../assets/img/STUDIO-06.jpg" alt="Imagen estudio6">
-              <img src="../assets/img/STUDIO-07.jpg" alt="Imagen estudio7">
-              <img src="../assets/img/STUDIO-08.jpg" alt="Imagen estudio8">
-              <img src="../assets/img/STUDIO-09.jpg" alt="Imagen estudio9">
+              <img src="../assets/img/COVER-0.jpg" alt="Cover 0" />
+              <img src="../assets/img/COVER-1.jpg" alt="Cover 1" />
+              <img src="../assets/img/COVER-2.jpg" alt="Cover 2" />
+              <img src="../assets/img/COVER-3.jpg" alt="Cover 3" />
+              <img src="../assets/img/COVER-4.jpg" alt="Cover 4" />
+              <img src="../assets/img/COVER-5.jpg" alt="Cover 5" />
+              <img src="../assets/img/COVER-6.jpg" alt="Cover 6" />
+              <img src="../assets/img/COVER-7.jpg" alt="Cover 7" />
             </div>
           </div>
-      </section>
-      </section>
-    </main>
-  </div>
+        </section>
+
+        <section id="studio" class="box">
+          <!-- <span class="corners corners--bottom"></span> -->
+          <h2>ESTUDIO</h2>
+          <p class="description">
+            Todos nuestros servicios están disponibles de manera online. Pero si
+            vives en Asturias o te apetece visitar esta maravillosa provincia
+            también puedes venir a nuestro estudio.
+          </p>
+          <p class="description last">
+            Aquí os dejamos una muestra de nuestro espacio de trabajo con una
+            actuación en vivo de uno de los integrantes de nuestro equipo.
+          </p>
+          <!-- <img src="../assets/img/MARKETING-IMG-4.png" alt="Marketing image 4">   -->
+          <div class="video-wrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/jlKeclWUtBI?si=vhAVYtA5p2k5CATq"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="../assets/img/STUDIO-01.jpg" alt="Imagen estudio1" />
+              <img src="../assets/img/STUDIO-02.jpg" alt="Imagen estudio2" />
+              <img src="../assets/img/STUDIO-03.jpg" alt="Imagen estudio3" />
+              <img src="../assets/img/STUDIO-04.jpg" alt="Imagen estudio4" />
+              <img src="../assets/img/STUDIO-05.jpg" alt="Imagen estudio5" />
+              <img src="../assets/img/STUDIO-06.jpg" alt="Imagen estudio6" />
+              <img src="../assets/img/STUDIO-07.jpg" alt="Imagen estudio7" />
+              <img src="../assets/img/STUDIO-08.jpg" alt="Imagen estudio8" />
+              <img src="../assets/img/STUDIO-09.jpg" alt="Imagen estudio9" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <footer>
       <div class="footer footer-content background">
-
         <div class="footer-left">
           <p class="footer-title">BAJO VIGILANCIA MUSIC &copy;</p>
 
@@ -214,10 +307,17 @@
         </div>
 
         <div class="footer-badge">
-          <a href="https://soundbetter.com/profiles/704126-bajovigilancia-music" rel="noopener noreferrer" target="_blank" title="BajoVigilancia Music profile on SoundBetter" ><img alt="BajoVigilancia Music, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" /></a>
+          <a
+            href="https://soundbetter.com/profiles/704126-bajovigilancia-music"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="BajoVigilancia Music profile on SoundBetter"
+            ><img
+              alt="BajoVigilancia Music, Mastering Engineer on SoundBetter"
+              src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+          /></a>
         </div>
-
       </div>
     </footer>
-</body>
+  </body>
 </html>

@@ -27,6 +27,9 @@ body {
   background-color: var(--white);
   color: var(--black);
 }
+.no-lg {
+    display: none;
+}
 
 .layout {
   display: flex;
@@ -108,6 +111,7 @@ section h2 {
   color: var(--black);
   padding: 0.5rem 1rem;
   display: block;
+  width: fit-content;
 }
 
 #navbar a:hover {
@@ -134,6 +138,7 @@ section h2 {
   padding: 0.3rem 1rem;
   font-size: 1.5rem;
   font-weight: normal;
+  justify-self: flex-end;
 }
 
 /* CONTENIDO DE LA PÁGINA */
@@ -281,7 +286,8 @@ select option {
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: clamp(1rem, 4vw, 10rem);
+  gap: clamp(1rem, 3.5vw, 10rem);
+  justify-content: center;
 }
 
 .services-media {
@@ -299,8 +305,6 @@ select option {
 
 .services-image {
   max-width: 100%;
-  /* max-height: 200px; */
-  /* width: auto; */
   width: 660px;
   height: auto;
   display: block;
@@ -483,19 +487,16 @@ footer .footer-badge img {
 /* ========================= */
 /* CRUCES DECORATIVAS */
 /* ========================= */
-
-/* Base común */
-.corners {
+/* Base para todas las esquinas */
+.corner {
   position: absolute;
-  inset: 0;
   pointer-events: none;
   --size: clamp(1rem, 1.3rem, 1.5rem);
-  --thickness: clamp(0.1rem, 0.3rem, 0.5rem);
+  --thickness: clamp(0.1rem, 0.2rem, 0.3rem);
 }
 
-/* Base + */
-.corners::before,
-.corners::after {
+.corner::before,
+.corner::after {
   content: "";
   position: absolute;
   width: var(--size);
@@ -505,45 +506,75 @@ footer .footer-badge img {
     linear-gradient(black, black) center / var(--thickness) 100% no-repeat;
 }
 
+/* Posicionamiento de las esquinas */
+.corner.top-left { top: 0.5rem; left: 0.5rem; }
+.corner.top-right { top: 0.5rem; right: 1.8rem; }
+.corner.bottom-left { bottom: 1.8rem; left: 0.5rem; }
+.corner.bottom-right { bottom: 1.8rem; right: 1.8rem; }
+
+/* Centrados */
+.corner.center-top { top: 0.5rem; left: 50%; transform: translateX(-50%); }
+.corner.center-bottom { bottom: 1.8rem; left: 50%; transform: translateX(-50%); }
+/* Base común */
+/* .corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --size: clamp(1rem, 1.3rem, 1.5rem);
+  --thickness: clamp(0.1rem, 0.3rem, 0.5rem);
+} */
+
+/* Base + */
+/* .corners::before,
+.corners::after {
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background:
+    linear-gradient(black, black) center / 100% var(--thickness) no-repeat,
+    linear-gradient(black, black) center / var(--thickness) 100% no-repeat;
+} */
+
 /* + SUPERIOR IZQ */
-.corners--top::before {
+/* .corners--top::before {
   top: 0.5rem;
   left: 0.5rem;
-}
+} */
 
 /* + SUPERIOR DERECHA */
-.corners--top::after {
+/* .corners--top::after {
   top: 0.5rem;
   right: 0.5rem;
-}
+} */
 
 /* + INFERIOR IZQUIERDA */
-.corners--bottom::before {
+/* .corners--bottom::before {
   bottom: 0.5rem;
   left: 0.5rem;
-}
+} */
 
 /* + INFERIOR DERECHA */
-.corners--bottom::after {
+/* .corners--bottom::after {
   bottom: 0.5rem;
   right: 0.5rem;
-}
+} */
 
 /* CONTROLAR CUALES SE MUESTRAN */
 /* Las 4 + */
-.box--all .corners {
+/* .box--all .corners {
   display: block;
-}
+} */
 
 /* Solo abajo */
-.box--bottom .corners--top {
+/* .box--bottom .corners--top {
   display: none;
-}
+} */
 
 /* Solo arriba */
-.box--top .corners--bottom {
+/* .box--top .corners--bottom {
   display: none;
-}
+} */
 
 /* ========================= */
 /* MEDIA QUERIES */
@@ -586,8 +617,12 @@ footer .footer-badge img {
     display: none;
   }
 
+  .no-lg {
+    display: block;
+  }
+
   .box {
-    padding: 4rem;
+    padding: clamp(1.5rem, 12vw, 4rem);
   }
 
   #menu-toggle {
@@ -697,13 +732,19 @@ footer .footer-badge img {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .services-image {
+    justify-self: center;
+  }
+}
+
 /* | DE LOS LINKS DEL FOOTER */
 
-@media (min-width: 510px) and (max-width: 762px) {
+@media (min-width: 464px) and (max-width: 762px) {
   footer .footer-content .footer-links a:first-child::after {
     content: "|";
     position: absolute;
-    right: -12px;
+    right: -17px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -714,11 +755,11 @@ footer .footer-badge img {
   }
 }
 
-@media (min-width: 762px) {
+@media (min-width: 713px) {
   footer .footer-content .footer-links a:not(:last-child)::after {
     content: "|";
     position: absolute;
-    right: -12px;
+    right: -16px;
     top: 50%;
     transform: translateY(-50%);
   }
