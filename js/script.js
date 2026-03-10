@@ -24,33 +24,49 @@ window.addEventListener("resize", () => {
 
 // Carousel functionality
 
-const track = document.querySelector(".carousel-track");
+const tracks = document.querySelectorAll(".carousel-track");
 
-let isDragging = false;
-let startX = 0;
-let startScroll = 0;
+tracks.forEach((track) => {
+  let isDragging = false;
+  let startX = 0;
+  let startScroll = 0;
+  let velocity = 0;
+  let rafID;
 
-track.addEventListener("pointerdown", (e) => {
-  isDragging = true;
-  track.setPointerCapture(e.pointerId);
-  startX = e.clientX;
-  startScroll = track.scrollLeft;
-  track.classList.add("dragging");
-});
+  const animate = () => {
+    if (!isDragging) {
+      track.scrollLeft += velocity;
+      velocity *= 0.95; // fricción
+      if (Math.abs(velocity) > 0.5) {
+        rafID = requestAnimationFrame(animate);
+      }
+    }
+  };
 
-track.addEventListener("pointermove", (e) => {
-  if (!isDragging) return;
-  const dx = e.clientX - startX;
-  track.scrollLeft = startScroll - dx;
-});
+  track.addEventListener("pointerdown", (e) => {
+    isDragging = true;
+    track.setPointerCapture(e.pointerId);
+    startX = e.clientX;
+    startScroll = track.scrollLeft;
+    velocity = 0;
+    track.classList.add("dragging");
+    cancelAnimationFrame(rafID);
+  });
 
-track.addEventListener("pointerup", (e) => {
-  isDragging = false;
-  track.releasePointerCapture(e.pointerId);
-  track.classList.remove("dragging");
-});
+  track.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    velocity = -dx; // guarda la velocidad para inercia
+    track.scrollLeft = startScroll - dx;
+  });
 
-track.addEventListener("pointercancel", () => {
-  isDragging = false;
-  track.classList.remove("dragging");
+  const stopDragging = () => {
+    isDragging = false;
+    track.releasePointerCapture(e.pointerId);
+    track.classList.remove("dragging");
+    rafID = requestAnimationFrame(animate); // inicia la inercia
+  };
+
+  track.addEventListener("pointerup", stopDragging);
+  track.addEventListener("pointercancel", stopDragging);
 });
