@@ -14,81 +14,86 @@
     <title>BV Landing Page</title>
   </head>
   <body>
-    <header>
-      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <button id="menu-toggle-close" aria-label="Close navigation">X</button>
-      <div id="nav-overlay"></div>
-      <nav id="navbar">
-        <ul>
-          <li class="category"><a href="../index.html">HOME</a></li>
-          <li class="category has-submenu">
-            <a href="./services.html">SERVICIOS</a>
-            <ul class="submenu">
-              <li class="sub-category">
-                <a href="./services.html#mix">MEZCLA</a>
-              </li>
-              <li class="sub-category">
-                <a href="./services.html#master">MASTERING</a>
-              </li>
-              <li class="sub-category">
-                <a href="./services.html#studio">ESTUDIO</a>
-              </li>
-              <li class="sub-category">
-                <a href="./services.html#design">DISEÑO</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#">CONTACTO</a></li>
-          <li><a href="./faqs.html">FAQs</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="layout">
+      <header>
+        <span class="corners corners--top no-md"></span>
+        <span class="corners corners--bottom no-md"></span>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <button id="menu-toggle-close" aria-label="Close navigation">X</button>
+        <div id="nav-overlay"></div>
+        <nav id="navbar">
+          <ul>
+            <li class="category"><a href="../index.html">HOME</a></li>
+            <li class="category has-submenu">
+              <a href="./services.html">SERVICIOS</a>
+              <ul class="submenu">
+                <li class="sub-category">
+                  <a href="./services.html#mix">MEZCLA</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#master">MASTERING</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#studio">ESTUDIO</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#design">DISEÑO</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">CONTACTO</a></li>
+            <li><a href="./faqs.html">FAQs</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <section class="box">
-        <span class="corners corners--top"></span>
-        <span class="corners corners--bottom"></span>
-        <div class="content-top">
-          <h1>CONTACTO</h1>
-          <p class="description">
-            Si tienes cualquier duda o sugerencia, no dudes en contactar con
-            nosotros a través del formulario.
-          </p>
-        </div>
-      </section>
-      <section id="form" class="box">
-        <div class="container contact">
-          <!-- FORMULARIO -->
-          <div class="contact-form">
-            <form>
-              <input type="text" placeholder="Nombre" required />
-
-              <input type="email" placeholder="Email" required />
-
-              <input type="tel" placeholder="Teléfono" />
-
-              <select name="servicio" required>
-                <option value="" disabled selected>Seleccionar servicio</option>
-                <option value="mezcla">Mezcla</option>
-                <option value="mastering">Mastering</option>
-                <option value="mezcla-mastering">Mezcla y Mastering</option>
-                <option value="estudio">Estudio</option>
-                <option value="diseno">Diseño</option>
-              </select>
-              
-              <textarea placeholder="Mensaje"></textarea>
-
-              <button type="submit">Enviar</button>
-            </form>
+      <main>
+        <section class="box">
+          <!-- <span class="corners corners--top"></span>
+          <span class="corners corners--bottom"></span> -->
+          <div class="content-top">
+            <h1>CONTACTO</h1>
+            <p class="description">
+              Si tienes cualquier duda o sugerencia, no dudes en contactar con
+              nosotros a través del formulario.
+            </p>
           </div>
+        </section>
+        <section id="form" class="box">
+          <div class="container contact">
+            <!-- FORMULARIO -->
+            <div class="contact-form">
+              <form>
+                <input type="text" placeholder="Nombre" required />
 
-          <div class="contact-map">
-            <img src="../assets/img/MAPA.png" alt="Mapa de España" />
+                <input type="email" placeholder="Email" required />
+
+                <input type="tel" placeholder="Teléfono" />
+
+                <select name="servicio" required>
+                  <option value="" disabled selected>
+                    Seleccionar servicio
+                  </option>
+                  <option value="mezcla">Mezcla</option>
+                  <option value="mastering">Mastering</option>
+                  <option value="mezcla-mastering">Mezcla y Mastering</option>
+                  <option value="estudio">Estudio</option>
+                  <option value="diseno">Diseño</option>
+                </select>
+
+                <textarea placeholder="Mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+
+            <div class="contact-map">
+              <img src="../assets/img/MAPA.png" alt="Mapa de España" />
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-
+        </section>
+      </main>
+    </div>
     <footer>
       <div class="footer footer-content background">
         <div class="footer-left">

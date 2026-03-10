@@ -1,55 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/icons/LOGO-BV-FAVICON.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/icons/LOGO-BV-FAVICON.svg"
+    />
     <script src="../js/script.js" defer></script>
     <title>BV Landing Page</title>
-</head>
+  </head>
 
-<body>
-    <header>
+  <body>
+    <div class="layout">
+      <header>
+        <span class="corners corners--top no-md"></span>
+        <span class="corners corners--bottom no-md"></span>
         <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
         <button id="menu-toggle-close" aria-label="Close navigation">X</button>
         <div id="nav-overlay"></div>
         <nav id="navbar">
-        <ul>
+          <ul>
             <li class="category"><a href="../index.html">HOME</a></li>
             <li class="category has-submenu">
-            <a href="./services.html">SERVICIOS</a>
-            <ul class="submenu">
-                <li class="sub-category"><a href="./services.html#mix">MEZCLA</a></li>
-                <li class="sub-category"><a href="./services.html#master">MASTERING</a></li>
-                <li class="sub-category"><a href="./services.html#studio">ESTUDIO</a></li>
-                <li class="sub-category"><a href="./services.html#design">DISEÑO</a></li>
-            </ul>
+              <a href="./services.html">SERVICIOS</a>
+              <ul class="submenu">
+                <li class="sub-category">
+                  <a href="./services.html#mix">MEZCLA</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#master">MASTERING</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#studio">ESTUDIO</a>
+                </li>
+                <li class="sub-category">
+                  <a href="./services.html#design">DISEÑO</a>
+                </li>
+              </ul>
             </li>
             <li><a href="./contact.html">CONTACTO</a></li>
             <li><a href="#">FAQs</a></li>
-        </ul>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
-      <section class="box">
-        <span class="corners corners--top"></span>
-        <span class="corners corners--bottom"></span>
-        <div class="content-top">
-          <h1>Preguntas Frecuentes</h1>
-          <p class="description">Aquí encontrarás respuestas a las preguntas más comunes sobre nuestros servicios y procesos.</p>
-          <!-- <section class="faq">
+      <main>
+        <section class="box">
+          <!-- <span class="corners corners--top"></span>
+          <span class="corners corners--bottom"></span> -->
+          <div class="content-top">
+            <h1>Preguntas Frecuentes</h1>
+            <p class="description">
+              Aquí encontrarás respuestas a las preguntas más comunes sobre
+              nuestros servicios y procesos.
+            </p>
+            <!-- <section class="faq">
               <h2>¿Cómo puedo contratar sus servicios?</h2>
               <p>Puedes contactarnos a través de nuestro formulario en la página de contacto o enviándonos un correo electrónico a <a href="mailto:music@bajovigilancia.com">music@bajovigilancia.com</a></p> -->
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <footer>
       <div class="footer footer-content background">
-
         <div class="footer-left">
           <p class="footer-title">BAJO VIGILANCIA MUSIC &copy;</p>
 
@@ -61,10 +79,17 @@
         </div>
 
         <div class="footer-badge">
-          <a href="https://soundbetter.com/profiles/704126-bajovigilancia-music" rel="noopener noreferrer" target="_blank" title="BajoVigilancia Music profile on SoundBetter" ><img alt="BajoVigilancia Music, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" /></a>
+          <a
+            href="https://soundbetter.com/profiles/704126-bajovigilancia-music"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="BajoVigilancia Music profile on SoundBetter"
+            ><img
+              alt="BajoVigilancia Music, Mastering Engineer on SoundBetter"
+              src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+          /></a>
         </div>
-
       </div>
     </footer>
-</body>
+  </body>
 </html>

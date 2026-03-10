@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("../assets/fonts/HelveticaNowDisplayRegular-5760477.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --corporative-pink: #f72585;
   --black: #000000;
   --white: #f5f5f5;
-  --white-transparent: rgba(255, 255, 255, 0.6);
+  --white-transparent: rgba(255, 255, 255, 0.4);
 }
 
 html,
@@ -14,26 +22,35 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Stara", sans-serif;
+  font-family: "Helvetica Now Display", Helvetica, Arial, sans-serif;
   background-color: var(--white);
   color: var(--black);
 }
 
-header {
+.layout {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  flex: 1;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.5rem 0px;
   z-index: 1;
+  min-height: 40vh;
+  top: 0px;
+  flex: 0 0 260px;
 }
 
 main {
-  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 section h2 {
@@ -122,7 +139,7 @@ section h2 {
 
 .box {
   position: relative;
-  padding: 4rem;
+  padding: 4rem clamp(2rem, 3vw, 4rem) 4rem clamp(3rem, 3vw, 4rem);
 }
 
 section.background {
@@ -130,7 +147,6 @@ section.background {
 }
 
 section .content-top {
-  width: 70%;
   display: flex;
   flex-direction: column;
   margin-top: 0.5rem;
@@ -550,6 +566,30 @@ footer .footer-badge img {
 
 @media only screen and (max-width: 762px) {
   /* HEADER Y NAVBAR */
+  .layout {
+    display: block;
+  }
+
+  header {
+    position: fixed;
+    right: 0;
+    width: auto;
+    flex: none;
+  }
+
+  main {
+    width: 100%;
+    flex: none;
+  }
+
+  .no-md {
+    display: none;
+  }
+
+  .box {
+    padding: 4rem;
+  }
+
   #menu-toggle {
     display: block;
   }
