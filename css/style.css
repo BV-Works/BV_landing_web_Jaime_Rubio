@@ -1,11 +1,20 @@
 @font-face {
   font-family: "Helvetica Now Display";
   src: url("../assets/fonts/HelveticaNowDisplayRegular-5760477.ttf")
-    format("truetype");
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Stara";
+  src: url("../assets/fonts/Stara-ExtraBold-BF659627090225d.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --corporative-pink: #f72585;
@@ -27,6 +36,11 @@ body {
   background-color: var(--white);
   color: var(--black);
 }
+
+.font-title {
+  font-family: "Stara", sans-serif;
+}
+
 .no-lg {
     display: none;
 }
@@ -45,7 +59,7 @@ header {
   align-items: flex-start;
   padding: 1.5rem 0px;
   z-index: 1;
-  min-height: 40vh;
+  min-height: 35vh;
   top: 0px;
   flex: 0 0 260px;
 }
@@ -55,6 +69,10 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+main.intro {
+  place-self: end;
 }
 
 section h2 {
@@ -105,13 +123,15 @@ section h2 {
 }
 
 #navbar a {
-  font-size: 2rem;
+  font-family: "Stara", sans-serif;
+  font-size: 2.1rem;
   font-weight: bolder;
   text-decoration: none;
   color: var(--black);
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   display: block;
   width: fit-content;
+  justify-self: flex-end;
 }
 
 #navbar a:hover {
@@ -138,7 +158,6 @@ section h2 {
   padding: 0.3rem 1rem;
   font-size: 1.5rem;
   font-weight: normal;
-  justify-self: flex-end;
 }
 
 /* CONTENIDO DE LA PÁGINA */
@@ -155,11 +174,11 @@ section.background {
 section .content-top {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5rem;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   color: var(--corporative-pink);
   font-weight: bold;
@@ -167,6 +186,9 @@ section .content-top {
 
 .who-we-are .title {
   color: var(--black);
+  font-size: clamp(4.5rem, 11vw, 8rem);
+  width: 68%;
+  line-height: 1;
 }
 
 .sub-title {
@@ -512,6 +534,9 @@ footer .footer-badge img {
 .corner.bottom-left { bottom: 1.8rem; left: 0.5rem; }
 .corner.bottom-right { bottom: 1.8rem; right: 1.8rem; }
 
+
+.corner.top-left.footer { top: -2.5rem; left: 0.5rem; }
+.corner.top-right.footer { top: -2.5rem; right: 1.8rem; }
 /* Centrados */
 .corner.center-top { top: 0.5rem; left: 50%; transform: translateX(-50%); }
 .corner.center-bottom { bottom: 1.8rem; left: 50%; transform: translateX(-50%); }
@@ -580,9 +605,16 @@ footer .footer-badge img {
 /* MEDIA QUERIES */
 /* ========================= */
 
+@media only screen and (max-width: 400px) {
+  .who-we-are .title {
+    font-size: 2.5rem !important;
+  }
+}
+
 @media only screen and (max-width: 510px) {
-  .title {
-    font-size: 2.5rem;
+  .who-we-are .title {
+    font-size: 3.5rem;
+    width: 100%;
   }
 
   .services {
@@ -592,6 +624,13 @@ footer .footer-badge img {
 
   .carousel-track img {
     max-height: 270px;
+  }
+}
+
+@media (min-width: 510px) and (max-width: 830px) {
+  .who-we-are .title {
+    font-size: 4.5rem;
+    width: 100%;
   }
 }
 
