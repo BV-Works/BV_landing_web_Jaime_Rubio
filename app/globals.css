@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand palette ported 1:1 from the original site */
+  --color-pink: #f72585;
+  --color-ink: #000000;
+  --color-paper: #f5f5f5;
+  --color-paper-translucent: rgba(255, 255, 255, 0.4);
+}
+
+html {
+  background-color: var(--color-paper);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Landing background image (Home + footer area on inner pages) */
+.bv-bg {
+  background: url("/img/DESCKTOP-LANDING-BACKGROUND.png") center / cover no-repeat;
+}
+
+/* ===================================================== */
+/* Decorative corner "+" crosses — signature brand mark  */
+/* Re-created from the original .corner pseudo-elements   */
+/* ===================================================== */
+.bv-corner {
+  position: absolute;
+  pointer-events: none;
+  --size: 1.3rem;
+  --thickness: 0.2rem;
+}
+
+.bv-corner::before {
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background:
+    linear-gradient(var(--color-ink), var(--color-ink)) center / 100% var(--thickness) no-repeat,
+    linear-gradient(var(--color-ink), var(--color-ink)) center / var(--thickness) 100% no-repeat;
+}
+
+/* Hide native scrollbar on drag carousels (desktop) */
+.bv-carousel-track {
+  scrollbar-width: none;
+}
+.bv-carousel-track::-webkit-scrollbar {
+  display: none;
+}
